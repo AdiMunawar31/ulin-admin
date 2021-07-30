@@ -2,3 +2,45 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* CHECKBOX TOGGLE SWITCH */
+/* @apply rules for documentation, these do not work as inline style */
+.toggle-checkbox:checked {
+	@apply: right-0 border-yellow-400;
+	right: 0;
+	border-color: #cc8708;
+}
+.toggle-checkbox:checked + .toggle-label {
+	@apply: bg-yellow-400;
+	background-color: #ffd726;
+}
+
+html,
+body {
+	margin: 0;
+	background-color: #15202b;
+}
+
+.overflow-y-auto::-webkit-scrollbar,
+.overflow-y-scroll::-webkit-scrollbar,
+.overflow-x-auto::-webkit-scrollbar,
+.overflow-x::-webkit-scrollbar,
+.overflow-x-scroll::-webkit-scrollbar,
+.overflow-y::-webkit-scrollbar,
+body::-webkit-scrollbar {
+	display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.overflow-y-auto,
+.overflow-y-scroll,
+.overflow-x-auto,
+.overflow-x,
+.overflow-x-scroll,
+.overflow-y,
+body {
+	-ms-overflow-style: none;
+	/* IE and Edge */
+	scrollbar-width: none;
+	/* Firefox */
+}

@@ -1,204 +1,111 @@
 <template>
-  <nav
-    class="
-      w-full
-      flex
-      items-center
-      justify-between
-      flex-wrap
-      bg-white
-      py-4
-      lg:px-12
-      shadow
-      border-solid border-t-2 border-blue-700
-    "
-  >
-    <div
-      class="
-        flex
-        justify-between
-        lg:w-auto
-        w-full
-        lg:border-b-0
-        pl-6
-        pr-2
-        border-solid border-b-2 border-gray-300
-        pb-5
-        lg:pb-0
-      "
-    >
-      <div class="flex items-center flex-shrink-0 text-gray-800 mr-16">
-        <span class="font-bold text-xl tracking-tight">D2YPOST</span>
+  <header class='w-full bg-gray-800 p-4 flex justify-between items-center'>
+    <nav class='flex items-center'>
+      <img
+        class='h-7 ml-3'
+        src='../assets/logo_white2.png'
+      />
+      <div class='text-white text-xs hidden sm:block ml-5'>
+        <a
+          href='#'
+          class='bg-gray-900 hover:bg-gray-700 p-2 rounded cursor-pointer'
+        >Dashboard</a>
+        <a
+          href='#'
+          class='bg-gray-900 hover:bg-gray-700 p-2 rounded cursor-pointer ml-1'
+        >Projects</a>
+        <a
+          href='#'
+          class='bg-gray-900 hover:bg-gray-700 p-2 rounded cursor-pointer ml-1'
+        >Issues</a>
+        <a
+          href='#'
+          class='bg-gray-900 hover:bg-gray-700 p-2 rounded cursor-pointer ml-1'
+        >Boards</a>
       </div>
-    </div>
+    </nav>
 
-    <div
-      class="
-        menu
-        w-full
-        flex-grow
-        lg:flex
-        lg:justify-around
-        lg:w-auto
-        lg:px-3
-        px-8
-      "
-    >
-      <!-- Menu -->
-
-      <div class="text-md font-bold text-blue-700 lg:flex-grow">
-        <router-link
-          to="/"
-          class="
-            flex
-            mt-4
-            lg:inline-block
-            lg:mt-0
-            hover:text-white
-            px-4
-            py-2
-            rounded
-            hover:bg-blue-700
-            mr-2
-          "
+    <div class='bg-gray-900 rounded flex items-center w-full max-w-xl mr-4 p-2 shadow-sm border border-gray-700'>
+      <button class='outline-none focus:outline-none'>
+        <svg
+          class='w-5 text-gray-400 h-5 cursor-pointer'
+          fill='none'
+          stroke-linecap='round'
+          stroke-linejoin='round'
+          stroke-width='2'
+          stroke='currentColor'
+          viewBox='0 0 24 24'
         >
-          Home
-        </router-link>
-        <router-link
-          to="/about"
-          class="
-            flex
-            mt-4
-            lg:inline-block
-            lg:mt-0
-            hover:text-white
-            px-4
-            py-2
-            rounded
-            hover:bg-blue-700
-            mr-2
-          "
-        >
-          About Adi
-        </router-link>
-        <router-link
-          @click="post"
-          to="/post"
-          class="
-            flex
-            mt-4
-            lg:inline-block
-            lg:mt-0
-            hover:text-white
-            px-4
-            py-2
-            rounded
-            hover:bg-blue-700
-            mr-2
-          "
-        >
-          Post
-        </router-link>
-      </div>
-
-      <!-- ENDMENU -->
-
-      <!-- This is an example component -->
-      <div class="relative mx-auto text-gray-600 lg:block hidden">
-        <input
-          class="
-            border-2 border-gray-300
-            bg-white
-            h-10
-            pl-2
-            pr-8
-            rounded-lg
-            text-sm
-            focus:outline-none
-          "
-          type="search"
-          name="search"
-          placeholder="Search"
-        />
-        <button type="submit" class="absolute right-0 top-0 mt-3 mr-2">
-          <svg
-            class="text-gray-600 h-4 w-4 fill-current"
-            xmlns="http://www.w3.org/2000/svg"
-            version="1.1"
-            id="Capa_1"
-            x="0px"
-            y="0px"
-            viewBox="0 0 56.966 56.966"
-            style="enable-background: new 0 0 56.966 56.966"
-            xml:space="preserve"
-            width="512px"
-            height="512px"
-          >
-            <path
-              d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z"
-            />
-          </svg>
-        </button>
-      </div>
-      <button
-        class="
-          block
-          mt-4
-          lg:inline-block
-          lg:mt-0
-          text-white
-          px-4
-          py-2
-          rounded
-          bg-blue-700
-          ml-5
-        "
-        @click="logout"
-      >
-        <i class="fas fa-sign-out-alt"></i> Sign Out
+          <path d='M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z' />
+        </svg>
       </button>
+      <input
+        type='search'
+        name
+        id
+        placeholder='Search'
+        class='w-full pl-3 text-sm text-black outline-none focus:outline-none bg-transparent'
+      />
     </div>
-  </nav>
+
+    <div class='flex mx-3'>
+      <svg
+        class='h-12 md:h-7 text-gray-300 hover:text-yellow-400'
+        xmlns='http://www.w3.org/2000/svg'
+        fill='none'
+        viewBox='0 0 24 24'
+        stroke='currentColor'
+      >
+        <path
+          stroke-linecap='round'
+          stroke-linejoin='round'
+          stroke-width='2'
+          d='M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z'
+        />
+      </svg>
+
+      <!-- SETTING -->
+
+      <router-link to='/setting'>
+        <svg
+          class='h-12 mx-3 md:h-7 text-gray-100 hover:text-yellow-400 animate animate-spin'
+          style='animation-duration: 7000ms'
+          xmlns='http://www.w3.org/2000/svg'
+          fill='none'
+          viewBox='0 0 24 24'
+          stroke='currentColor'
+        >
+          <path
+            stroke-linecap='round'
+            stroke-linejoin='round'
+            stroke-width='{2}'
+            d='M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z'
+          />
+          <path
+            stroke-linecap='round'
+            stroke-linejoin='round'
+            stroke-width='{2}'
+            d='M15 12a3 3 0 11-6 0 3 3 0 016 0z'
+          />
+        </svg>
+      </router-link>
+      <span class='text-white text-sm mt-1 mr-3'>{{gettersAuthdata.username}}</span>
+
+      <div class='w-8 h-8 cursor-pointer'>
+        <img
+          class='rounded-full'
+          src='../assets/icon.png'
+        />
+      </div>
+    </div>
+  </header>
 </template>
 
 <script>
-import { useRouter } from "vue-router";
-import { ref, computed } from "vue";
-import { useStore } from "vuex";
-
+import { mapGetters } from 'vuex'
 export default {
-  setup() {
-    const name = ref("");
-    const route = useRouter();
-
-    const store = useStore();
-
-    const logout = () => {
-      Swal.fire({
-        title: "Are you sure?",
-        text: "You won't be able to revert this!",
-        icon: "warning",
-        showCancelButton: true,
-        confirmButtonColor: "#3085d6",
-        cancelButtonColor: "#d33",
-        confirmButtonText: "Yes, Sign Out!",
-      }).then((result) => {
-        if (result.isConfirmed) {
-          route.push({ name: "Login" });
-          Swal.fire("Sign Out Success!", "Your has been Sign Out.", "success");
-          sessionStorage.setItem("LOGIN", false);
-          sessionStorage.setItem("NAME", name.value);
-        } else {
-          return false;
-        }
-      });
-    };
-
-    const post = computed(() => {
-      store.dispatch("getPosts");
-    });
-
-    return { logout, name, post };
-  },
-};
+  computed: {
+    ...mapGetters('auth', { gettersAuthdata: 'getAuthData' })
+  }
+}
 </script>

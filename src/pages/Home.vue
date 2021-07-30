@@ -1,23 +1,12 @@
 <template>
-  <Suspense>
-    <template #default>
-    
-        <HomeComp />
-      
-    </template>
-
-    <template #fallback>
-      <Loader />
-    </template>
-  </Suspense>
+  <Admin />
 </template>
 
 <script>
-import HomeComp from "../components/HomeComp.vue";
-import Loader from "../components/Loader.vue";
+import Admin from "../components/DashboardComp/Admin.vue";
 
 export default {
-  components: { HomeComp, Loader },
+  components: { Admin },
   setup() {},
 };
 </script>
