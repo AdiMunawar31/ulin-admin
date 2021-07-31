@@ -1,12 +1,19 @@
 <template>
-  <div class='min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-gray-700 md:to-gray-800 to-gray-700 px-5 pd:mx-0'>
-    <div class='flex flex-col bg-gray-800 shadow-md px-4 md:px-6 lg:px-10 py-8 rounded-md w-full max-w-md'>
-      <div class='self-center text-lg sm:text-2xl uppercase text-gray-200'>Login To Ulin Admin</div>
+  <div class='min-h-screen flex flex-col items-center -mt-7 justify-center bg-gradient-to-r from-gray-900 md:to-gray-800 to-gray-800 px-5 pd:mx-0'>
+    <div>
+      <img
+        class='h-28 -mb-1'
+        src='../assets/icon.png'
+        alt='logo'
+      />
+    </div>
+    <div class='flex flex-col bg-gray-800 shadow-lg px-4 md:px-6 lg:px-10 py-8 rounded-md w-full max-w-md border-t-4 border-l border-r border-yellow-400'>
+      <div class='self-center text-lg sm:text-2xl font-bold uppercase text-gray-200 border-b-2 border-yellow-400'>Ulin Admin</div>
 
       <!-- <h1 class='text-white text-3xl'>{{ email }}</h1> -->
       <!-- EMAIL -->
 
-      <div class='mt-10'>
+      <div class='mt-9'>
         <form @submit.prevent='login'>
           <div
             class='flex flex-col mb-6'
@@ -91,7 +98,7 @@
 
           <!-- REGISTER -->
 
-          <div class='flex w-full'>
+          <div class='flex w-full mb-2 md:mb-5'>
             <button
               type='submit'
               :disabled='v$.form.$invalid'
@@ -104,7 +111,7 @@
       </div>
 
       <!-- Login -->
-      <div class='flex justify-center items-center mt-6'>
+      <!-- <div class='flex justify-center items-center mt-6'>
         <div class='text-xs items-center text-yellow-500 hover:text-yellow-700'>
           <span>
             <i class='fas fa-user-plus'></i>
@@ -114,7 +121,7 @@
             >You don't have an account?</router-link>
           </span>
         </div>
-      </div>
+      </div>-->
     </div>
   </div>
 </template>

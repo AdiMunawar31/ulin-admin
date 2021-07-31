@@ -82,32 +82,32 @@ const actions = {
 
     },
 
-    async register({ commit }, { username, email, password }) {
+    // async register({ commit }, { username, email, password }) {
 
-        await axios.post(`https://ulin-api.herokuapp.com/auth/register`, { username, email, password })
-            .then(response => {
-                Swal.fire(
-                    'Register Success!',
-                    `Hello ${username}, Please Login!`,
-                    'success'
-                ).then(result => {
-                    if (result.isConfirmed) {
-                        router.push({ path: '/login' })
-                    } else {
-                        return false
-                    }
-                })
-            })
-            .catch(err => {
-                console.log(err);
-                Swal.fire(
-                    'Error!',
-                    `Error: ${err.message}`,
-                    'error'
-                )
+    //     await axios.post(`https://ulin-api.herokuapp.com/auth/register`, { username, email, password })
+    //         .then(response => {
+    //             Swal.fire(
+    //                 'Register Success!',
+    //                 `Hello ${username}, Please Login!`,
+    //                 'success'
+    //             ).then(result => {
+    //                 if (result.isConfirmed) {
+    //                     router.push({ path: '/login' })
+    //                 } else {
+    //                     return false
+    //                 }
+    //             })
+    //         })
+    //         .catch(err => {
+    //             console.log(err);
+    //             Swal.fire(
+    //                 'Error!',
+    //                 `Error: ${err.message}`,
+    //                 'error'
+    //             )
 
-            })
-    },
+    //         })
+    // },
 
 }
 

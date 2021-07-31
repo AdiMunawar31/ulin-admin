@@ -4,7 +4,7 @@ import { store } from '../vuex'
 import Home from "../pages/Home.vue";
 import Places from "../pages/Places/Places.vue";
 import Login from "../pages/Login.vue";
-import Register from "../pages/Register.vue";
+// import Register from "../pages/Register.vue";
 import Admin from "../pages/Admin.vue";
 import CreatePlace from "../pages/Places/CreatePlace.vue";
 import DetailPlace from "../pages/Places/DetailPlace.vue";
@@ -21,12 +21,12 @@ const routes = [
     component: Login,
     meta: { authRequired: true }
   },
-  {
-    path: "/register",
-    name: "Register",
-    component: Register,
-    meta: { authRequired: true }
-  },
+  // {
+  //   path: "/register",
+  //   name: "Register",
+  //   component: Register,
+  //   meta: { authRequired: true }
+  // },
   {
     path: "/",
     name: "Admin",
