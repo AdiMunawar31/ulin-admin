@@ -14,7 +14,6 @@
         >
           <router-link
             :to='route.to'
-            exact
             class='bg-gray-900 flex items-center text-white p-2 rounded mt-2 cursor-pointer focus:bg-gray-700 focus:text-yellow-300'
           >
             <span>

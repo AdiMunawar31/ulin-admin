@@ -58,17 +58,7 @@ const actions = {
         await axios.post('https://ulin-api.herokuapp.com/auth/login', { email, password })
             .then(response => {
                 commit('setAuthData', response.data)
-                Swal.fire(
-                    'Login Success!',
-                    'Welcome to ULIN ADMIN!',
-                    'success'
-                ).then(result => {
-                    if (result.isConfirmed) {
-                        router.push({ path: '/' })
-                    } else {
-                        return false
-                    }
-                })
+                router.push({ path: '/' })
             })
             .catch(err => {
                 console.log(err);
